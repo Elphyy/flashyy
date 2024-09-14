@@ -38,7 +38,7 @@ class Flashcard:
         current_date = datetime.now().date()
         days_difference = (current_date - self.created_at).days
         if days_difference > 0 and current_date == self.last_studied_at :
-            self.freshness += days_difference
+            self.freshness += 1
 
     def update_last_studied(self) -> None:
         self.last_studied_at = datetime.now().date()
